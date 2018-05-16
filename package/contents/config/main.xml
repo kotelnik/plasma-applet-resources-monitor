@@ -9,6 +9,9 @@
         <entry name="updateInterval" type="Double">
             <default>1.0</default>
         </entry>
+        <entry name="fontScale" type="int">
+            <default>30</default>
+        </entry>
         <entry name="showCpuMonitor" type="Bool">
             <default>true</default>
         </entry>
