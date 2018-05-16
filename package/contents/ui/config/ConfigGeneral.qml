@@ -5,6 +5,7 @@ import QtQuick.Layouts 1.1
 Item {
     
     property alias cfg_updateInterval: updateIntervalSpinBox.value
+    property alias cfg_fontScale: fontScale.value
     property alias cfg_showCpuMonitor: showCpuMonitor.checked
     property alias cfg_showClock: showClock.checked
     property alias cfg_showRamMonitor: showRamMonitor.checked
@@ -27,6 +28,18 @@ Item {
             stepSize: 0.1
             minimumValue: 0.1
             suffix: i18nc('Abbreviation for seconds', 's')
+        }
+        
+        Label {
+            text: i18n('Font scale:')
+            Layout.alignment: Qt.AlignRight
+        }
+        
+        SpinBox {
+            id: fontScale
+            minimumValue: 1
+            maximumValue: 100
+            suffix: i18nc('Percent', '%')
         }
         
         Item {

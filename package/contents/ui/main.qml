@@ -34,6 +34,7 @@ Item {
     property bool memoryInPercent: plasmoid.configuration.memoryInPercent
     property bool enableHints: plasmoid.configuration.enableHints
     property bool enableShadows: plasmoid.configuration.enableShadows
+    property double fontScale: (plasmoid.configuration.fontScale / 100)
     property bool showMemoryInPercent: memoryInPercent
     
     property int itemMargin: 5
@@ -41,7 +42,7 @@ Item {
     property double parentHeight: parent === null ? 0 : parent.height
     property double itemWidth:  vertical ? ( verticalLayout ? parentWidth : (parentWidth - itemMargin) / 2 ) : ( verticalLayout ? (parentHeight - itemMargin) / 2 : parentHeight )
     property double itemHeight: itemWidth
-    property double fontPixelSize: itemHeight * 0.26
+    property double fontPixelSize: itemHeight * fontScale
     property int graphGranularity: 20
     
     property color warningColor: Qt.tint(theme.textColor, '#60FF0000')
