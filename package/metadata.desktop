@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Resources Monitor
-Comment=Plasmoid for monitoring CPU and memory
+Comment=Plasmoid for monitoring CPU, memory and network
 Type=Service
 X-KDE-ParentApp=
 X-KDE-PluginInfo-Author=Kotelnik

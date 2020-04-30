@@ -15,6 +15,9 @@
         <entry name="showRamMonitor" type="Bool">
             <default>true</default>
         </entry>
+        <entry name="showNetMonitor" type="Bool">
+            <default>true</default>
+        </entry>
         <entry name="memoryInPercent" type="Bool">
             <default>false</default>
         </entry>
@@ -31,5 +34,29 @@
             <default>true</default>
         </entry>
     </group>
+
+    <group name="Data">
+        <entry name="networkSensorDownload" type="String">
+            <default>network/interfaces/enp4s0/receiver/data</default>
+        </entry>
+        <entry name="downloadMaxKBs" type="Double">
+            <default>7168</default>
+        </entry>
+        <entry name="networkSensorUpload" type="String">
+            <default>network/interfaces/enp4s0/transmitter/data</default>
+        </entry>
+        <entry name="uploadMaxKBs" type="Double">
+            <default>717</default>
+        </entry>
+    </group>
     
+    <group name="Appearance">
+        <entry name="networkDownloadDiagramColor" type="Color">
+            <default>#00ff00</default>
+        </entry>
+        <entry name="networkUploadDiagramColor" type="Color">
+            <default>#ff0000</default>
+        </entry>
+    </group>
+
 </kcfg>

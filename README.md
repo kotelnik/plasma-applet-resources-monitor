@@ -1,2 +1,2 @@
 # plasma-applet-network-monitor
-Plasmoid for monitoring CPU and RAM.
+Plasmoid for monitoring CPU, RAM and network traffic.
