@@ -38,7 +38,7 @@ Item {
             width: historyGraph.width / graphGranularity
             height: historyGraph.height * graphItemPercent
             x: 0
-            y: parent.height - height
+            y: parent === null ? 0 : parent.height - height
             color: barColor
             radius: 3
         }
