@@ -84,7 +84,7 @@ Item {
         property string totalLoad: cpuSystem + "TotalLoad"
         property string memPhysical: "mem/physical/"
         property string memFree: memPhysical + "free"
-        property string memApplication: memPhysical + "application"
+        property string memAllocated: memPhysical + "allocated"
         property string memUsed: memPhysical + "used"
         property string swap: "mem/swap/"
         property string swapUsed: swap + "used"
@@ -97,13 +97,13 @@ Item {
         property int swapUsedBytes: 0
         property double swapUsedProportion: 0
 
-        connectedSources: [memFree, memUsed, memApplication, swapUsed, swapFree, averageClock, totalLoad ]
+        connectedSources: [memFree, memUsed, memAllocated, swapUsed, swapFree, averageClock, totalLoad ]
         
         onNewData: {
             if (data.value === undefined) {
                 return
             }
-            if (sourceName == memApplication) {
+            if (sourceName == memAllocated) {
                 ramUsedBytes = parseInt(data.value)
                 ramUsedProportion = fitMemoryUsage(data.value)
             }
